@@ -10,8 +10,9 @@ from dotenv import load_dotenv
 
 def run_pipeline(api_key):
     raw_movies = []
+    MAX_PAGES = 500
 
-    for page in range(1,4):
+    for page in range(1,MAX_PAGES + 1):
         page_movies = extract_movies(api_key, page=page)
         raw_movies.extend(page_movies)
         print(f"Page {page}: fetched {len(page_movies)} movies.")
