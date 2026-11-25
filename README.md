@@ -1,5 +1,9 @@
 # TMDB Movie Data ETL Pipeline
 
+<p align="center">
+  <img src="docs/images/tmdb-etl-hero.png" alt="TMDB Movie Data ETL Pipeline Architecture and Verification" width="100%">
+</p>
+
 An end-to-end Python batch ETL (Extract, Transform, Load) pipeline that extracts top-rated movies from The Movie Database (TMDB) REST API across multiple pages, cleans and standardizes records with pandas, and validates data quality before saving to a clean CSV.
 
 > **Quick Summary for Reviewers:**
