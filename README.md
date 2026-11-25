@@ -1,11 +1,15 @@
 # TMDB Movie Data ETL Pipeline
 
+<p align="center">
+  <img src="docs/images/tmdb-etl-hero.png" alt="TMDB Movie Data ETL Pipeline Architecture and Verification" width="100%">
+</p>
+
 An end-to-end Python batch ETL (Extract, Transform, Load) pipeline that extracts top-rated movies from The Movie Database (TMDB) REST API across multiple pages, cleans and standardizes records with pandas, and validates data quality before saving to a clean CSV.
 
 > **Quick Summary for Reviewers:**
 > - **What did I build?** An automated, defensive Python batch ETL pipeline extracting paginated movie data across the TMDB REST API into a validated, deduplicated tabular dataset.
-> - **What result or output can you see?** Verified clean extraction of 60 top-rated movie records (3 pages × 20 records) into `data/movies_cleaned.csv` with 0 duplicate IDs and complete schema compliance.
-> - **Which file should you open first?** Start with [`src/pipeline.py`](./src/pipeline.py) to see orchestrator execution and validation rules, followed by [`src/transform.py`](./src/transform.py) for pandas deduplication and cleaning.
+> - **What result or output can you see?** Verified clean extraction of **9,980 raw movie records** across 500 pages, exported into **9,475 clean, deduplicated records** in `data/movies_cleaned.csv` with 0 duplicate IDs and complete schema compliance.
+> - **Which file should you open first?** Start with [`pipeline.py`](./pipeline.py) to see orchestrator execution and validation rules, followed by [`transform.py`](./transform.py) for pandas deduplication and cleaning.
 
 ## 1. Project Overview
 
